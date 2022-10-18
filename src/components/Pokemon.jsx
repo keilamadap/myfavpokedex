@@ -1,15 +1,23 @@
 import React, { useContext } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { searchPokemon } from "../api";
 import FavoriteContext from "../contexts/favoritesContext";
 
 const Pokemon = (props) => {
   const { favoritePokemons, updateFavoritePokemons } =
     useContext(FavoriteContext);
   const { pokemon } = props;
+  const navigate = useNavigate();
+
   // funcao responsavel por favoritar o pokemon utilizando localstorage
   const onHeartClick = () => {
     updateFavoritePokemons(pokemon.name);
   };
   const heart = favoritePokemons.includes(pokemon.name) ? "❤️" : "🖤";
+
+  const selectPokemon = (id) => {
+    navigate(`/details/${id}`);
+  };
 
   return (
     <div className="pokemon-card">
@@ -20,7 +28,8 @@ const Pokemon = (props) => {
           className="pokemon-img"
         />
       </div>
-      <div className="card-body">
+
+      <div className="card-body" onClick={(e) => selectPokemon(pokemon.id)}>
         <div className="card-top">
           <h3>{pokemon.name}</h3>
           <div># {pokemon.id}</div>

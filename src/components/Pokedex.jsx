@@ -4,6 +4,7 @@ import Pokemon from "./Pokemon";
 
 const Pokedex = (props) => {
   const { pokemons, loading, page, setPage, totalPages } = props;
+
   const onLeftClickHandler = () => {
     if (page > 0) {
       setPage(page - 1);
@@ -14,6 +15,7 @@ const Pokedex = (props) => {
       setPage(page + 1);
     }
   };
+
   return (
     <div>
       <div className="pokedex-header">
