@@ -53,7 +53,7 @@
 }
 
 .pokedex-header {
-
+    margin-right: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -65,16 +65,19 @@
 .pokedex-grid {
  
     display: grid;
-    gap: 10px;
+    gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 100px;
-    margin-right: 20px;
+    margin: 0 auto;
+    margin-right: 10px;
     margin-left: 20px;
 }
+
 
 .pokemon-card {
     background-color: #9fd3c7;
     display: flex;
+    width: 80%;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
 }
@@ -83,6 +86,7 @@
     width: 100px;
     height: 100px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .pokemon-img-container {

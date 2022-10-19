@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
-import App from "./App";
+import App from "./pages/App";
 import PokemonDetails from "./pages/PokemonDetails";
 import Pokedex from "./components/Pokedex";
 
@@ -11,10 +11,8 @@ root.render(
   <BrowserRouter>
     <React.StrictMode>
       <Routes>
-        <Route element={<App />}>
-          <Route exact path="/" element={<Pokedex />} />
-          <Route exact path="/details/:id" element={<PokemonDetails />} />
-        </Route>
+        <Route path="/" element={<App />} />
+        <Route exact path="/details/:id" element={<PokemonDetails />} />
       </Routes>
     </React.StrictMode>
   </BrowserRouter>

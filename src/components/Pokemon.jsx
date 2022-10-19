@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { searchPokemon } from "../api";
+import { useNavigate } from "react-router-dom";
 import FavoriteContext from "../contexts/favoritesContext";
 
 const Pokemon = (props) => {
@@ -26,10 +25,11 @@ const Pokemon = (props) => {
           alt={pokemon.name}
           src={pokemon.sprites.front_default}
           className="pokemon-img"
+          onClick={(e) => selectPokemon(pokemon.id)}
         />
       </div>
 
-      <div className="card-body" onClick={(e) => selectPokemon(pokemon.id)}>
+      <div className="card-body">
         <div className="card-top">
           <h3>{pokemon.name}</h3>
           <div># {pokemon.id}</div>

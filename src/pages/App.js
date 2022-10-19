@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { getPokemonData, getPokemons, searchPokemon } from "./api";
+import { getPokemonData, getPokemons, searchPokemon } from "../api";
 import "./App.css";
-import { FavoriteProvider } from "./contexts/favoritesContext";
-import Navbar from "./components/Navbar";
-import Pokedex from "./components/Pokedex";
-import Search from "./components/Search";
+import { FavoriteProvider } from "../contexts/favoritesContext";
+import Navbar from "../components/Navbar";
+import Pokedex from "../components/Pokedex";
+import Search from "../components/Search";
 
 const favoriteKey = "f";
 
