@@ -17,7 +17,7 @@
 
 .navbar-img {
     margin: 0 auto;
-    width: 160px;
+    width: 180px;
 }
 
 
@@ -102,7 +102,27 @@
     padding: 1rem 1rem;
     border-radius: 5px;
     border: 2px dashed #ef5350;
+    box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.25);
 }
+
+.btn-voltar{
+   margin-left: 80%;
+    border-radius: 3px;
+    padding: 6px 20px;
+    font-weight: bold;
+    border: 3px solid #808080;
+    background-color: #808080;
+    cursor: pointer;
+    color: white;
+    }
+
+.btn-voltar:hover{
+    background-color: #ef5350;
+    border: 3px solid #ef5350;
+  
+}
+ 
+
 .horizontal-rule{
     padding: 5px 5px;
 }
@@ -216,6 +236,38 @@ text-align: center;
 .details-container img{
     width: 150px;
     height: 150px;
+}
+
+.about-me{
+    justify-content: center;
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+    color: #ef5350;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 3rem;
+    
+}
+.about-me h2{
+    color: black;
+    margin-bottom: 2rem;
+}
+.about-me-link {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #e5e5e5;
+    padding: 8px 6px;
+    border-radius: 6px;
+}
+.about-me-link:hover{
+    color: #ef5350;
+}
+.texto{
+    background-color: #e5e5e5;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .App {

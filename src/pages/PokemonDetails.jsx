@@ -1,32 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import FavoriteContext, {
-  FavoriteProvider,
-} from "../contexts/favoritesContext";
 import SinglePokemonImg from "../components/SinglePokemonIMG";
 
 const PokemonDetails = () => {
   const { id } = useParams();
-  const [pokemonDetalhes, setPokemonDetalhes] = useState("");
   const [height, setHeight] = useState(null);
   const [weight, setWeight] = useState(null);
   const [abilities, setAbilities] = useState(null);
-  const [pokemonType, setPokemonType] = useState(null);
   const [pokemonName, setPokemonName] = useState(null);
 
   const baseURL = `https://pokeapi.co/api/v2/pokemon/${id}/`;
-
-  // const getPokemonDetails = async (url) => {
-  //   const res = await fetch(url);
-  //   const data = await res.json();
-  //   setPokemonDetalhes(data);
-  // };
-
-  // useEffect(() => {
-  //   const pokemonURL = `${baseURL}${id}`;
-  //   getPokemonDetails(pokemonURL);
-  // }, []);
+  // eslint-disable-next-line
 
   const getSinglePokemon = async (url) => {
     fetch(url)
@@ -40,7 +25,6 @@ const PokemonDetails = () => {
         setHeight(data.height);
         setWeight(data.weight);
         setAbilities(data.abilities);
-        setPokemonType(data.types);
         setPokemonName(data.name);
       })
       .catch((err) => {
@@ -62,7 +46,6 @@ const PokemonDetails = () => {
       <section className="characteristics">
         <h2 className="title-charac"> # characteristics </h2>
 
-        {/* <hr className="horizontal-rule"></hr> */}
         <br />
 
         <p>
@@ -84,8 +67,8 @@ const PokemonDetails = () => {
             })}
         </div>
       </section>
-      <Link to="/" className="goback">
-        Voltar
+      <Link to="/">
+        <button className="btn-voltar">Voltar</button>
       </Link>
     </main>
   );

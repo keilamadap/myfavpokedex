@@ -1,6 +1,7 @@
 import React from "react";
 import Pagination from "./Pagination";
 import Pokemon from "./Pokemon";
+import { Link } from "react-router-dom";
 
 const Pokedex = (props) => {
   const { pokemons, loading, page, setPage, totalPages } = props;
@@ -19,7 +20,11 @@ const Pokedex = (props) => {
   return (
     <div>
       <div className="pokedex-header">
-        <h1>Pokedex</h1>
+        <Link to="/aboutme" className="about-me-link">
+          <h3>Project Details</h3>
+        </Link>
+        {/* <h1>Pokedex </h1> */}
+
         <Pagination
           page={page + 1}
           totalPages={totalPages}
