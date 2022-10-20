@@ -4,15 +4,15 @@ const Pagination = (props) => {
   const { page, totalPages, onLeftClick, onRightClick } = props;
   return (
     <div className="pagination-container">
-      <button onClick={onLeftClick}>
-        <div>«</div>
-      </button>
+      <span onClick={onLeftClick}>
+        <div>« </div>
+      </span>
       <div>
-        {page} de {totalPages}
+        &nbsp;&nbsp;&nbsp; {page} de {totalPages}&nbsp;&nbsp;&nbsp;&nbsp;
       </div>
-      <button onClick={onRightClick}>
-        <div>»</div>
-      </button>
+      <span onClick={onRightClick}>
+        <div> »</div>
+      </span>
     </div>
   );
 };

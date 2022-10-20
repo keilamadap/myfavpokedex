@@ -17,7 +17,7 @@ function App() {
   const [favorites, setFavorites] = useState([]);
 
   // limite dos itens por pagina
-  const itensPerPage = 24;
+  const itensPerPage = 20;
   //funcao para puxar os dados da API na url do getPokemonData
   const fetchPokemons = async () => {
     try {
