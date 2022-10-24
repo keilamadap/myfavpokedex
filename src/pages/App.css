@@ -29,8 +29,6 @@
 
 .searchbar {
     background-color: white;
-  
-    
 }
 
 .searchbar input {
@@ -54,33 +52,31 @@
 }
 
 .pokedex-header {
-    margin-right: 50px;
-    margin-left: 60px;
+  
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 30px;
-    
+    padding: 30px 0;
 }
 
 .pokedex-grid {
-  
-    grid-gap: 10px;
-    display: grid;
-     grid-template-columns: repeat(3, 1fr);
+      
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 5rem;
-    margin-left: 4rem;
+    gap: 30px; 
 }
+
 
 
 .pokemon-card {
     background-color: #9fd3c7;
     display: flex;
-    width: 80%;
+    width: 350px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
-    
 }
 
 .pokemon-card:hover{
