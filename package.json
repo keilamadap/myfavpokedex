@@ -1,6 +1,6 @@
 {
   "name": "podekex",
-  "homepage": "./myfavpokedex",
+  "homepage": "https://keilamadap.github.io/myfavpokedex/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
