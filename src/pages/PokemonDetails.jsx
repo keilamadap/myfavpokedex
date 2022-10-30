@@ -34,7 +34,7 @@ const PokemonDetails = () => {
 
   useEffect(() => {
     getSinglePokemon(baseURL);
-  }, []);
+  });
 
   return (
     <main>
