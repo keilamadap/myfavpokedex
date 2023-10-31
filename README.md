@@ -32,7 +32,7 @@ git clone  https://github.com/keilamadap/myfavpokedex.git
 2. Entre no diretorio
 
 ```shell
-cd dropmail
+cd myfavpokedex
 ```
 
 3. Instale as dependências usando (yarn) ou (npm)
